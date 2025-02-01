@@ -3,7 +3,7 @@ import { userList } from "../Data";
 
 const userSlice = createSlice({
     name:'users',
-    initialState:userList,
+    initialState:[],
     reducers:{
         //add
         addUser: (state,action) => {

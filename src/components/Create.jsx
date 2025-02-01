@@ -14,7 +14,8 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addUser({id:users[users.length - 1].id+1,name,email}));
+    const newId = users.length > 0 ? Math.max(...users.map(user => user.id)) + 1 : 1;
+    dispatch(addUser({id:newId,name,email}));
     navigate('/')
   }
 
