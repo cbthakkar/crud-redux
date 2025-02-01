@@ -16,7 +16,7 @@ const userSlice = createSlice({
             const same = state.find((user) => user.id == id);
             if(same) {
                 same.name = name;
-                same.email = email;
+                same.email = email;    
             }
         },
 
