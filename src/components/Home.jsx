@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Simple CRUD Using Redux</h1>
+      <h1>Simple CRUD Using Redux Changee</h1>
       <Link to={'/create'}>Add User</Link>
 
       <table>
