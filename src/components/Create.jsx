@@ -14,10 +14,12 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newId = users.length > 0 ? Math.max(...users.map(user => user.id)) + 1 : 1;
-    dispatch(addUser({id:newId,name,email}));
-    navigate('/')
-  }
+    if (name.trim() !== "" && email.trim() !== "") {
+      const newId = users.length > 0 ? users.length + 1 : 1;
+      dispatch(addUser({ id: newId, name, email }));
+      navigate("/");
+    }
+  };
 
   return (
     <div>

@@ -29,6 +29,7 @@ const Home = () => {
         </thead>
         <tbody>
          {
+          users.length > 0 ?
           users.map((user,index) => (
             <tr key={index}>
               <td>{user.id}</td>
@@ -39,7 +40,8 @@ const Home = () => {
               <button onClick={() => handleDelete(user.id)} style={{ marginLeft:'20px'}}>DELETE</button>
               </td>
             </tr>
-          ))
+          )) :
+          <p>No User Found..</p>
          }
         </tbody>
       </table>
